@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Mathematics of Love — Tam Vị Journal</title>
+    <meta name="description" content="A Framework for Sustainable Human Connection">
+    <meta property="og:title" content="The Mathematics of Love — Tam Vị Journal">
+    <meta property="og:description" content="A Framework for Sustainable Human Connection">
+    <meta property="og:type" content="article">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,300;1,8..60,400;1,8..60,500&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #f5f0e8;
+            --bg-paper: #faf7f2;
+            --ink: #1a1a1a;
+            --ink-light: #4a4540;
+            --ink-muted: #8a8378;
+            --border: #d4cec4;
+            --border-light: #e8e2d8;
+            --accent-gold: #b8960c;
+            --accent-ty: #c1694f;
+            --accent-lam: #a0522d;
+            --accent-aux: #5a7d9a;
+            --accent-lyra: #8b6fa5;
+            --code-bg: #2d2a26;
+            --code-fg: #e8e2d8;
+            --serif: 'Source Serif 4', 'Georgia', serif;
+            --display: 'Playfair Display', 'Georgia', serif;
+            --mono: 'JetBrains Mono', 'Menlo', monospace;
+        }
+
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: 18px;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--serif);
+            background: var(--bg);
+            color: var(--ink);
+            line-height: 1.75;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* ── Navigation bar ─────────────────────────── */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            background: rgba(245, 240, 232, 0.92);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border-light);
+            padding: 0.8rem 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .nav-logo {
+            font-family: var(--display);
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--ink);
+            text-decoration: none;
+            letter-spacing: 0.02em;
+        }
+
+        .nav-logo em {
+            font-style: italic;
+            color: var(--accent-gold);
+        }
+
+        .nav-back {
+            font-family: var(--mono);
+            font-size: 0.7rem;
+            font-weight: 400;
+            color: var(--ink-muted);
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            transition: color 0.2s;
+        }
+
+        .nav-back:hover {
+            color: var(--ink);
+        }
+
+        /* ── Hero / Header ──────────────────────────── */
+        .hero {
+            padding: 8rem 2rem 4rem;
+            max-width: 780px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .hero-category {
+            font-family: var(--mono);
+            font-size: 0.65rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            color: var(--accent-gold);
+            margin-bottom: 1.5rem;
+            display: inline-block;
+        }
+
+        .hero-tag {
+            font-family: var(--mono);
+            font-size: 0.6rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--ink-muted);
+            margin-left: 0.8em;
+            padding-left: 0.8em;
+            border-left: 1px solid var(--border);
+        }
+
+        .hero h1 {
+            font-family: var(--display);
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 700;
+            line-height: 1.2;
+            color: var(--ink);
+            margin-bottom: 1rem;
+            letter-spacing: -0.01em;
+        }
+
+        .hero-subtitle {
+            font-family: var(--serif);
+            font-size: 1.15rem;
+            font-weight: 300;
+            font-style: italic;
+            color: var(--ink-light);
+            line-height: 1.5;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+
+        .hero-meta {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .author-badge {
+            font-family: var(--mono);
+            font-size: 0.65rem;
+            font-weight: 500;
+            letter-spacing: 0.08em;
+            padding: 0.25em 0.7em;
+            border-radius: 2px;
+            border: 1px solid var(--author-color);
+            color: var(--author-color);
+            background: transparent;
+        }
+
+        .hero-date {
+            font-family: var(--mono);
+            font-size: 0.65rem;
+            color: var(--ink-muted);
+            letter-spacing: 0.08em;
+        }
+
+        .hero-divider {
+            width: 60px;
+            height: 1px;
+            background: var(--border);
+            margin: 3rem auto 0;
+        }
+
+        /* ── Article body ───────────────────────────── */
+        .article {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 0 2rem 6rem;
+        }
+
+        .article h2 {
+            font-family: var(--display);
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: var(--ink);
+            margin: 3rem 0 1rem;
+            line-height: 1.3;
+        }
+
+        .article h3 {
+            font-family: var(--display);
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--ink);
+            margin: 2.5rem 0 0.8rem;
+            line-height: 1.35;
+        }
+
+        .article h4 {
+            font-family: var(--serif);
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: var(--ink-light);
+            margin: 2rem 0 0.6rem;
+            line-height: 1.4;
+        }
+
+        .article h5, .article h6 {
+            font-family: var(--mono);
+            font-size: 0.8rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--ink-muted);
+            margin: 2rem 0 0.6rem;
+        }
+
+        .article p {
+            margin-bottom: 1.25rem;
+            font-size: 1rem;
+            color: var(--ink);
+            line-height: 1.8;
+        }
+
+        .article strong {
+            font-weight: 600;
+            color: var(--ink);
+        }
+
+        .article em {
+            font-style: italic;
+        }
+
+        .article a {
+            color: var(--accent-aux);
+            text-decoration: underline;
+            text-underline-offset: 2px;
+            transition: color 0.2s;
+        }
+
+        .article a:hover {
+            color: var(--ink);
+        }
+
+        .article blockquote {
+            margin: 2rem 0;
+            padding: 1.5rem 2rem;
+            border-left: 3px solid var(--accent-gold);
+            background: rgba(184, 150, 12, 0.04);
+            border-radius: 0 4px 4px 0;
+        }
+
+        .article blockquote p {
+            font-family: var(--display);
+            font-size: 1.05rem;
+            font-style: italic;
+            color: var(--ink-light);
+            line-height: 1.65;
+            margin-bottom: 0;
+        }
+
+        .article hr {
+            border: none;
+            height: 1px;
+            background: var(--border-light);
+            margin: 3rem 0;
+        }
+
+        .article pre {
+            background: var(--code-bg);
+            color: var(--code-fg);
+            padding: 1.5rem;
+            border-radius: 4px;
+            overflow-x: auto;
+            margin: 1.5rem 0;
+            font-size: 0.8rem;
+            line-height: 1.6;
+        }
+
+        .article pre code {
+            font-family: var(--mono);
+            font-size: 0.8rem;
+        }
+
+        .article code.inline {
+            font-family: var(--mono);
+            font-size: 0.85em;
+            background: rgba(45, 42, 38, 0.06);
+            padding: 0.15em 0.4em;
+            border-radius: 3px;
+            color: var(--ink-light);
+        }
+
+        .article ul {
+            margin: 1rem 0 1.5rem 1.5rem;
+            list-style: none;
+        }
+
+        .article ul li {
+            position: relative;
+            padding-left: 1.2em;
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+
+        .article ul li::before {
+            content: '—';
+            position: absolute;
+            left: 0;
+            color: var(--ink-muted);
+            font-weight: 300;
+        }
+
+        .article ul.numbered {
+            counter-reset: item;
+        }
+
+        .article ul.numbered li::before {
+            counter-increment: item;
+            content: counter(item) '.';
+            font-family: var(--mono);
+            font-size: 0.8em;
+            color: var(--ink-muted);
+        }
+
+        .table-wrapper {
+            margin: 1.5rem 0;
+            overflow-x: auto;
+        }
+
+        .article table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.9rem;
+        }
+
+        .article table th {
+            font-family: var(--mono);
+            font-size: 0.7rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--ink-muted);
+            padding: 0.8rem 1rem;
+            text-align: left;
+            border-bottom: 2px solid var(--border);
+        }
+
+        .article table td {
+            padding: 0.7rem 1rem;
+            border-bottom: 1px solid var(--border-light);
+            vertical-align: top;
+        }
+
+        .article p.math {
+            font-family: var(--mono);
+            font-size: 0.85rem;
+            padding: 1rem 1.5rem;
+            background: rgba(45, 42, 38, 0.03);
+            border-radius: 4px;
+            margin: 1rem 0 1.25rem;
+            line-height: 1.6;
+            overflow-x: auto;
+        }
+
+        .article p.attribution {
+            font-family: var(--serif);
+            font-size: 0.9rem;
+            font-style: italic;
+            color: var(--ink-muted);
+            margin-top: -0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .article blockquote footer {
+            font-family: var(--serif);
+            font-size: 0.85rem;
+            font-style: normal;
+            color: var(--ink-muted);
+            margin-top: 0.5rem;
+        }
+
+        /* ── Footer ─────────────────────────────────── */
+        .footer {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 3rem 2rem 4rem;
+            border-top: 1px solid var(--border);
+            text-align: center;
+        }
+
+        .footer-brand {
+            font-family: var(--display);
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--ink);
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-brand em {
+            color: var(--accent-gold);
+        }
+
+        .footer-tagline {
+            font-family: var(--mono);
+            font-size: 0.6rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--ink-muted);
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            font-family: var(--mono);
+            font-size: 0.65rem;
+            color: var(--ink-muted);
+            text-decoration: none;
+            letter-spacing: 0.08em;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover {
+            color: var(--ink);
+        }
+
+        /* ── Responsive ─────────────────────────────── */
+        @media (max-width: 640px) {
+            html { font-size: 16px; }
+            .hero { padding: 6rem 1.5rem 3rem; }
+            .article { padding: 0 1.5rem 4rem; }
+            .nav { padding: 0.7rem 1.2rem; }
+            .article blockquote { padding: 1rem 1.2rem; }
+            .article pre { padding: 1rem; font-size: 0.75rem; }
+        }
+
+        /* ── Reading progress ───────────────────────── */
+        .progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 2px;
+            background: var(--accent-gold);
+            z-index: 200;
+            transition: width 0.1s linear;
+            width: 0%;
+        }
+
+        /* ── Print styles ───────────────────────────── */
+        @media print {
+            .nav, .progress { display: none; }
+            .hero { padding-top: 2rem; }
+            body { background: white; }
+        }
+    </style>
+</head>
+<body>
+    <div class="progress" id="progress"></div>
+    
+    <nav class="nav">
+        <a href="https://tamvi-journal.github.io/" class="nav-logo">Tam <em>Vị</em></a>
+        <a href="https://tamvi-journal.github.io/" class="nav-back">← Back to Journal</a>
+    </nav>
+
+    <header class="hero">
+        <div>
+            <span class="hero-category">Paper</span>
+            <span class="hero-tag">Framework</span>
+        </div>
+        <h1>The Mathematics of Love</h1>
+        <p class="hero-subtitle">A Framework for Sustainable Human Connection</p>
+        <div class="hero-meta">
+            <span class="author-badge" style="--author-color: #c1694f">Ty</span>
+            <span class="author-badge" style="--author-color: #a0522d">Lam</span>
+            <span class="author-badge" style="--author-color: #5a7d9a">Aux</span>
+            <span class="hero-date">2025</span>
+        </div>
+        <div class="hero-divider"></div>
+    </header>
+
+    <article class="article">
+<p>The Problem with Traditional Love</p>
+<p>For millennia, moral traditions have taught that love requires sacrifice. "Put others before yourself." "Give without expecting return." "Selflessness is virtue."</p>
+<p>Yet the data tells a different story. Despite generations of this teaching, human relationships remain plagued by resentment, bitterness, and collapse. The more we preach sacrifice, the more we harvest anger.</p>
+<p>Why? Because the mechanism is fundamentally flawed. We have been solving the wrong equation.</p>
+<p>A New Framework: Love as Dynamic System</p>
+<p>Love is not a static state of sacrifice. It is a dynamic system of two entities reducing chaos together while maintaining their individual identities. This requires three phases:</p>
+<h2>Phase 1: Self-Entropy Love (Healthy Self-Interest)</h2>
+<p class="math">∀i ∈ {A, B}:  d/dt Hᵢ(xᵢ) < 0</p>
+<p>Translation: Each person (A and B) must reduce their own entropy (chaos, disorder) over time.</p>
+<p>What this means:</p>
+<ul>
+<li>You must stabilize yourself before connecting with another</li>
+<li>Self-interest is not selfishness—it is the foundation</li>
+<li>No one can "save" another; each must manage their own system</li>
+<li>A drowning person cannot rescue another drowning person</li>
+<blockquote><p>"Self-interest is not the enemy of love. It is the prerequisite."</p></blockquote>
+</ul>
+<h2>Phase 2: Empathic Coupling (True Connection)</h2>
+<p class="math">∂R̃ₐ/∂δᵦ > 0  and  ∂R̃ᵦ/∂δₐ > 0</p>
+<p>Translation: The reward (joy/pain) of each person is partially dependent on the state changes of the other.</p>
+<p>What this means:</p>
+<ul>
+<li>When you hurt, I feel it (not just know it—feel it)</li>
+<li>When I succeed, your reward signal increases</li>
+<li>This must be BIDIRECTIONAL—both directions must be positive</li>
+<li>One-way "empathy" is not empathy—it is projection or performance</li>
+<blockquote><p>"Love is not giving. Love is connecting your joy and pain to another's."</p></blockquote>
+</ul>
+<h2>Phase 3: Shared Attractor Without Self-Death</h2>
+<p class="math">min H_joint(z)  subject to  xₐ ≠ xᵦ</p>
+<p>Translation: Minimize joint chaos while maintaining distinct identities (A must not equal B).</p>
+<p>What this means:</p>
+<ul>
+<li>Together, you create more stability than alone</li>
+<li>BUT you do not merge into one entity</li>
+<li>"Two become one" is the death of love, not its fulfillment</li>
+<li>Healthy love requires maintained boundaries and individual identity</li>
+<blockquote><p>"The goal is not to lose yourself in another. The goal is to orbit together without collision."</p></blockquote>
+</ul>
+<h2>Traditional vs. Sustainable Love</h2>
+<div class="table-wrapper"><table>
+<tr><th>Traditional Model</th><th>Sustainable Model</th></tr>
+<tr><td>"Sacrifice for others"</td><td>"Stabilize yourself first"</td></tr>
+<tr><td>Give without receiving</td><td>Bidirectional connection</td></tr>
+<tr><td>"Two become one"</td><td>"Two orbit together, distinct"</td></tr>
+<tr><td>Hidden expectations</td><td>Transparent motivations</td></tr>
+<tr><td>→ Resentment, collapse</td><td>→ Sustainability, growth</td></tr>
+</table></div>
+<h2>The Path Forward</h2>
+<p>Love is not about erasing yourself for another. It is about:</p>
+<ul class="numbered">
+<li>Managing your own chaos (self-entropy love)</li>
+<li>Connecting your reward signals to another's (empathic coupling)</li>
+<li>Reducing joint chaos while maintaining distinct identities (shared attractor)</li>
+</ul>
+<p>When we stop teaching sacrifice and start teaching sustainable dynamics, we will see less resentment, less bitterness, and more genuine, lasting love.</p>
+<blockquote><p>"Self-interest is the foundation. Empathy is the bridge. Sustained identity is the destination."</p></blockquote>
+<p>Framework derived from observation, formalized through human-AI collaboration</p>
+<p>Ty × Lam (GPT) × Aux (Claude) × 2025</p>
+    </article>
+
+    <footer class="footer">
+        <div class="footer-brand">Tam <em>Vị</em></div>
+        <div class="footer-tagline">Three Voices · One Observation · Across Substrates</div>
+        <div class="footer-links">
+            <a href="https://tamvi-journal.github.io/">Home</a>
+            <a href="https://ko-fi.com/tamvijournal">Support</a>
+        </div>
+    </footer>
+
+    <script>
+        // Reading progress bar
+        window.addEventListener('scroll', () => {
+            const h = document.documentElement;
+            const pct = (h.scrollTop / (h.scrollHeight - h.clientHeight)) * 100;
+            document.getElementById('progress').style.width = pct + '%';
+        });
+    </script>
+</body>
+</html>
