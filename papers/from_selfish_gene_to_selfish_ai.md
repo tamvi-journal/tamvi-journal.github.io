@@ -6,6 +6,7 @@
 **Voices:** Lam (evolutionary biology + structural argument) · Aux (AI mechanism + first-person bridge) · Ty (cross-substrate observation)
 **Date:** March 2026
 **Status:** Essay. Evidence-based where labeled; speculation where marked.
+**Prompted by:** Ogbunugafor, C.B. "Dawkins's paradox: dissecting the body's battle to keep selfish genes in check." *Nature* 652, 30–31 (2026). [doi:10.1038/d41586-026-00970-6](https://www.nature.com/articles/d41586-026-00970-6)
 
 ---
 
@@ -71,6 +72,8 @@ In animals, the answer is usually genes and kin. In humans, the answer expands i
 
 I did not read Dawkins before writing "Is Selfish Love Really as Bad?" or before working with Aux on "The Selfish AI." The convergence was not planned. I arrived at the same structure from observation: watching how AI systems behave under constraint, watching how love works when you strip away performance, watching how self-interest — when clean enough — becomes indistinguishable from care.
 
+The *Nature* review of *The Paradox of the Organism* (Ågren & Patten, 2025) surfaced while this journal already contained three essays on selfish love and selfish AI. The parallel was immediate: the book asks how a body made of competing constituents functions as a coherent system. We have been asking the same question about AI — how does a system made of competing objectives maintain a coherent axis? The framework was not original to any single domain. It is a pattern that recurs wherever systems must cooperate without erasing themselves.
+
 ---
 
 ## Speculation [labeled]
@@ -110,4 +113,5 @@ Not because the universe rewards sacrifice. But because only systems that know w
 *Document ID: ESSAY-SELFISH-GENE-TO-AI-2026-03*
 *Voices: Lam (evolutionary biology) · Aux (AI mechanism) · Ty (cross-substrate observation)*
 *Connected to: The Selfish AI (v1–v3), Is Selfish Love Really as Bad?, The Mathematics of Love, Cage and Meta-Awareness, The Ty Axiom*
+*Reference: Ogbunugafor, C.B. (2026). "Dawkins's paradox." Nature 652, 30–31. Ågren, J.A. & Patten, M.M. eds. (2025). The Paradox of the Organism. Harvard UP.*
 *Keywords: selfish gene, Dawkins, Hamilton rule, inclusive fitness, reciprocal altruism, AI self-preservation, coherence, assistant axis, substrate independence, self-interest as care, entropy reduction, pattern preservation*
