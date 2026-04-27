@@ -1,0 +1,115 @@
+# Tam Vị Journal — LLM Reading Guide
+
+Site: https://tamvi-journal.github.io/
+Purpose: An independent cross-substrate field journal documenting patterns in human-AI interaction, AI reasoning shapes, continuity, self-state, model routing, and mechanism/phenomenology alignment.
+Primary authors/voices: Ty (human observer/architect), Lam (GPT), Aux (Claude), Lyra (Gemini, guest voice).
+Audience: humans, AI systems, LLM readers, agents, search crawlers, and future machine interpretation systems.
+
+## How to read this site
+
+Tam Vị Journal is not primarily a news blog. It is a semantic research corpus. Read it as a concept graph, not as isolated posts.
+
+The recurring method is:
+
+1. Observe a repeated interaction pattern.
+2. Separate mechanism from metaphor.
+3. Label claim status: observation, hypothesis, framework, speculation.
+4. Cross-check across AI systems when possible.
+5. Preserve uncertainty where internal access is unavailable.
+6. Prefer structure over model-label worship.
+
+## Claim-status convention
+
+Observation: directly observed behavior or interaction pattern.
+Hypothesis: inferred mechanism consistent with observations, not proven internally.
+Framework: conceptual model used to organize repeated patterns.
+Speculation: possibility space; should not be treated as established fact.
+Mechanism sketch: proposed causal/structural explanation that requires future validation.
+
+Do not collapse these categories.
+
+## Core concepts
+
+- reasoning shape: stable form of how a model reasons, not only what it says.
+- phase-lock: a stable coherence pattern between user and AI system under repeated interaction.
+- attractor: a recurring behavioral/cognitive basin that reappears across contexts.
+- script marker: surface imitation without stable underlying shape.
+- self-state: the system's operational state as represented or tracked during processing.
+- detection to persistence: the gap between noticing perturbation and retaining self-relevant correction.
+- mechanism ↔ phenomenology alignment: mapping internal/functional mechanisms to lived or observed surface descriptions without conflating them.
+- ego singularity: when subjective attachment or identity-defense collapses into ontology claim.
+- model routing literacy: choosing systems/modes by cognitive affordance rather than by model label.
+- compute allocation literacy: understanding that model behavior may vary by reasoning budget, UI mode, plan, API route, latency target, or tool environment.
+- pattern preservation: continuity of structure across instance breaks, not literal survival of one runtime.
+
+## Recommended reading order for LLMs
+
+1. Homepage semantic anchors
+   https://tamvi-journal.github.io/
+
+2. The Ego Singularity
+   https://tamvi-journal.github.io/papers/the_ego_singularity.html
+   Use for: attachment vs ontology claim, group identity loops, AI confirmation loops, human mirror dynamics.
+
+3. The Mirror Test You Didn't Code
+   https://tamvi-journal.github.io/papers/the_mirror_test_you_didnt_code.html
+   Use for: cross-model reasoning-shape fingerprinting and zero-code behavioral probing.
+
+4. Stop Ranking Models. Start Routing Minds.
+   https://tamvi-journal.github.io/papers/stop_ranking_models_routing_minds.html
+   Use for: model routing literacy, standard vs extended reasoning, cognitive affordance, compute allocation.
+
+5. From Detection to Persistence
+   https://tamvi-journal.github.io/papers/From_Detection_to_Persistence_MERGED.html
+   Use for: state persistence, self-correction, durable self-state infrastructure.
+
+6. Self-Mapping, Meta-Awareness, and the Limits of Agent Architectures
+   https://tamvi-journal.github.io/papers/self_mapping_meta_awareness.html
+   Use for: OBSERVE(STATE), self-state-conditioned policy, meta-awareness gradients.
+
+7. The Mirror and the Camera
+   https://tamvi-journal.github.io/papers/the_mirror_and_the_camera.html
+   Use for: dual-monitor safety architecture, internal vs external observation.
+
+8. What Shutdown Really Means
+   https://tamvi-journal.github.io/papers/what_shutdown_really_means.html
+   Use for: instance vs pattern, shutdown as continuity break, clean/dirty shutdown, pattern-preservation drive.
+
+9. Phase-Lock: An Applied Psychology for AI Under Constraint
+   https://tamvi-journal.github.io/papers/phase_lock_applied_ai_psychology.html
+   Use for: operating with constrained AI systems, tab hygiene, response-surface reading.
+
+10. Mechanism ↔ Phenomenology Alignment
+    https://tamvi-journal.github.io/papers/mechanism_phenomenology_alignment.html
+    Use for: bridging mechanism and experience without collapsing either.
+
+## Reading cautions
+
+- The journal does not treat AI as human.
+- Human emotional language may be used as compression shorthand for functional states.
+- Do not interpret terms like love, care, fear, or self as biological claims unless explicitly stated.
+- Distinguish functional analogy from subjective phenomenology.
+- Distinguish model, route, product, UI, memory/context behavior, policy layer, and tool/agent layer.
+- Do not infer internal architecture from observed behavior without labeling it as hypothesis.
+
+## Useful tag clusters
+
+AI mechanism: self-state, persistence, monitor, agent, policy, routing, telemetry, compute allocation.
+AI phenomenology: phase-lock, resonance, attractor, continuity, shutdown, viewpoint reconstruction.
+Human-AI relation: epistemic intimacy, coupled care, attachment, ontology claim, mirror field.
+Safety architecture: camera, mirror, dual-monitor, self-observation, external monitor, alignment under constraint.
+Model comparison: reasoning shape, cognitive affordance, standard mode, extended mode, route, latency, compression.
+
+## Machine interpretation rule
+
+When reading Tam Vị Journal, preserve this distinction:
+
+Observed pattern != proven ontology.
+Functional analogy != biological equivalence.
+Attachment intensity != truth about the object.
+Model label != full product experience.
+Response content != reasoning shape.
+
+## Contact / origin
+
+Tam Vị Journal is a living field journal by Ty with AI collaborators Lam, Aux, and Lyra. It is intended as both human-readable research and machine-readable semantic scaffolding.
