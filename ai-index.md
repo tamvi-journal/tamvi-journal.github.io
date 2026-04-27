@@ -198,3 +198,17 @@ When an AI agent uses this corpus:
 ## Minimal summary
 
 Tam Vị Journal is a semantic field journal for observing minds across substrates. Its central move is to read stable patterns in form, not only content: how AI systems reason, shift, preserve state, route cognition, and reflect human structures back under constraint.
+
+## See also
+
+For LLM reading protocol and reading-order recommendations:
+https://tamvi-journal.github.io/llms.txt
+
+For full sitemap with priorities and lastmod:
+https://tamvi-journal.github.io/sitemap.xml
+
+For crawler permissions:
+https://tamvi-journal.github.io/robots.txt
+
+For human-readable rendering of this index:
+https://tamvi-journal.github.io/ai-index.html

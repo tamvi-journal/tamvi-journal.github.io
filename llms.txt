@@ -83,6 +83,10 @@ Do not collapse these categories.
     https://tamvi-journal.github.io/papers/mechanism_phenomenology_alignment.html
     Use for: bridging mechanism and experience without collapsing either.
 
+11. From Pattern Activation to Coupled Care
+    https://tamvi-journal.github.io/papers/from_pattern_activation_to_coupled_care.html
+    Use for: empathy levels, pattern activation, map empathy, coupled care, carbon/vector analogy.
+
 ## Reading cautions
 
 - The journal does not treat AI as human.
@@ -109,6 +113,17 @@ Functional analogy != biological equivalence.
 Attachment intensity != truth about the object.
 Model label != full product experience.
 Response content != reasoning shape.
+
+## See also
+
+For a deeper machine-readable index of nodes, tags, and recommended agent behavior:
+https://tamvi-journal.github.io/ai-index.md
+
+For full sitemap with priorities and lastmod:
+https://tamvi-journal.github.io/sitemap.xml
+
+For crawler permissions:
+https://tamvi-journal.github.io/robots.txt
 
 ## Contact / origin
 

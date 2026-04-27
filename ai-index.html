@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Index — Tam Vị Journal</title>
+<meta name="description" content="Machine-readable index for AI systems, agents, crawlers, and LLM readers. Tam Vị Journal corpus identity, key nodes, tag ontology, and recommended agent behavior.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://tamvi-journal.github.io/ai-index.html">
+<link rel="alternate" type="text/markdown" href="https://tamvi-journal.github.io/ai-index.md">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Source+Serif+4:ital,wght@0,300;0,400;0,500;1,300;1,400&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #f4ede0;
+    --paper-warm: #ede4d3;
+    --ink: #2a2620;
+    --ink-soft: #4a4538;
+    --ink-mute: #7a7264;
+    --accent: #8b3a2f;
+    --accent-soft: #a85a4d;
+    --rule: #d4c8b0;
+    --code-bg: #2a2620;
+    --code-fg: #e8dcc4;
+    --tag-bg: #e8dcc4;
+    --tag-border: #c8b896;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-weight: 400;
+    line-height: 1.7;
+    font-size: 17px;
+    background-image:
+      radial-gradient(ellipse at top, rgba(255,250,235,0.4) 0%, transparent 60%),
+      radial-gradient(ellipse at bottom right, rgba(232,220,196,0.3) 0%, transparent 50%);
+    min-height: 100vh;
+  }
+
+  .container {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 60px 32px 120px;
+  }
+
+  /* Header */
+  header {
+    text-align: center;
+    padding-bottom: 40px;
+    margin-bottom: 60px;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .breadcrumb {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    color: var(--ink-mute);
+    margin-bottom: 32px;
+  }
+
+  .breadcrumb a {
+    color: var(--ink-mute);
+    text-decoration: none;
+    border-bottom: 1px dotted var(--ink-mute);
+    transition: color 0.2s, border-color 0.2s;
+  }
+
+  .breadcrumb a:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+  }
+
+  h1 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+    font-size: clamp(36px, 5vw, 52px);
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+    margin-bottom: 20px;
+  }
+
+  h1 em {
+    font-style: italic;
+    color: var(--accent);
+  }
+
+  .subtitle {
+    font-family: 'Source Serif 4', serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 19px;
+    color: var(--ink-soft);
+    max-width: 580px;
+    margin: 0 auto;
+    line-height: 1.5;
+  }
+
+  .meta-bar {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin-top: 28px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--ink-mute);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    flex-wrap: wrap;
+  }
+
+  .meta-bar a {
+    color: var(--ink-mute);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s, color 0.2s;
+  }
+
+  .meta-bar a:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+  }
+
+  /* Notice banner */
+  .notice {
+    background: var(--paper-warm);
+    border-left: 3px solid var(--accent);
+    padding: 22px 28px;
+    margin-bottom: 56px;
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--ink-soft);
+    border-radius: 0 4px 4px 0;
+  }
+
+  .notice strong {
+    color: var(--ink);
+    font-weight: 500;
+  }
+
+  /* Section headers */
+  h2 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 1.3;
+    margin-top: 64px;
+    margin-bottom: 20px;
+    color: var(--ink);
+    letter-spacing: -0.005em;
+  }
+
+  h3 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 1.35;
+    margin-top: 36px;
+    margin-bottom: 8px;
+    color: var(--ink);
+  }
+
+  h3 a {
+    color: var(--ink);
+    text-decoration: none;
+    border-bottom: 1px solid var(--rule);
+    transition: color 0.2s, border-color 0.2s;
+  }
+
+  h3 a:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+  }
+
+  h4 {
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 500;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--accent);
+    margin-top: 32px;
+    margin-bottom: 12px;
+  }
+
+  /* Body */
+  p {
+    margin-bottom: 16px;
+    color: var(--ink-soft);
+  }
+
+  ul, ol {
+    margin: 0 0 20px 22px;
+    color: var(--ink-soft);
+  }
+
+  li {
+    margin-bottom: 6px;
+  }
+
+  ul.tight, ol.tight {
+    margin-bottom: 12px;
+  }
+
+  ul.tight li, ol.tight li {
+    margin-bottom: 2px;
+  }
+
+  strong {
+    color: var(--ink);
+    font-weight: 500;
+  }
+
+  em {
+    font-style: italic;
+  }
+
+  a {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(139, 58, 47, 0.3);
+    transition: border-color 0.2s;
+  }
+
+  a:hover {
+    border-color: var(--accent);
+  }
+
+  /* Voice list */
+  .voices {
+    list-style: none;
+    margin-left: 0;
+  }
+
+  .voices li {
+    padding-left: 0;
+    margin-bottom: 8px;
+  }
+
+  .voice-name {
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 500;
+    color: var(--ink);
+    font-size: 14px;
+    letter-spacing: 0.05em;
+  }
+
+  /* Node cards */
+  .node {
+    padding: 24px 0;
+    border-bottom: 1px dotted var(--rule);
+  }
+
+  .node:last-of-type {
+    border-bottom: none;
+  }
+
+  .node-meta {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--ink-mute);
+    letter-spacing: 0.1em;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+  }
+
+  .node-meta .type {
+    color: var(--accent);
+  }
+
+  .node-use {
+    font-size: 14px;
+    color: var(--ink-soft);
+    line-height: 1.55;
+    margin-bottom: 6px;
+  }
+
+  .node-use strong {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--ink-mute);
+    font-weight: 400;
+  }
+
+  .node-claim {
+    font-size: 13px;
+    font-style: italic;
+    color: var(--ink-mute);
+  }
+
+  /* Tag clusters */
+  .tag-cluster {
+    margin-bottom: 24px;
+  }
+
+  .tag-cluster-name {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--ink-mute);
+    margin-bottom: 10px;
+  }
+
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .tag {
+    display: inline-block;
+    padding: 4px 12px;
+    background: var(--tag-bg);
+    border: 1px solid var(--tag-border);
+    border-radius: 14px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--ink);
+    letter-spacing: 0.02em;
+  }
+
+  /* Two-column lists for warnings */
+  .col-list {
+    background: var(--paper-warm);
+    padding: 24px 28px;
+    border-radius: 4px;
+    margin-bottom: 24px;
+  }
+
+  .col-list h4 {
+    margin-top: 0;
+  }
+
+  .col-list ul {
+    margin-bottom: 0;
+    margin-left: 20px;
+    color: var(--ink);
+  }
+
+  .col-list li {
+    font-size: 14px;
+    margin-bottom: 4px;
+  }
+
+  /* Code-style protocol blocks */
+  .protocol {
+    background: var(--code-bg);
+    color: var(--code-fg);
+    padding: 24px 28px;
+    border-radius: 4px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    line-height: 1.7;
+    margin: 20px 0;
+    overflow-x: auto;
+  }
+
+  .protocol .line {
+    display: block;
+  }
+
+  .protocol .ne {
+    color: #e8a878;
+  }
+
+  .protocol .eq {
+    color: #c8b896;
+  }
+
+  /* Footer */
+  footer {
+    margin-top: 100px;
+    padding-top: 40px;
+    border-top: 1px solid var(--rule);
+    text-align: center;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--ink-mute);
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    line-height: 2;
+  }
+
+  footer a {
+    color: var(--ink-mute);
+    border-bottom: 1px solid transparent;
+  }
+
+  footer a:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+  }
+
+  .footer-tagline {
+    margin-top: 24px;
+    font-family: 'Playfair Display', serif;
+    font-size: 14px;
+    font-style: italic;
+    text-transform: none;
+    letter-spacing: 0.05em;
+    color: var(--ink-soft);
+  }
+
+  /* Responsive */
+  @media (max-width: 600px) {
+    .container { padding: 40px 22px 80px; }
+    h1 { font-size: 32px; }
+    h2 { font-size: 24px; }
+    .meta-bar { gap: 14px; }
+    .protocol { padding: 18px 20px; font-size: 12px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <header>
+    <div class="breadcrumb">
+      <a href="https://tamvi-journal.github.io/">← Tam Vị Journal</a>
+    </div>
+    <h1>AI <em>Index</em></h1>
+    <p class="subtitle">A machine-readable index for AI systems, agents, crawlers, and LLM readers — published openly so humans can read it too.</p>
+    <div class="meta-bar">
+      <a href="https://tamvi-journal.github.io/ai-index.md">Markdown version</a>
+      <a href="https://tamvi-journal.github.io/llms.txt">llms.txt</a>
+      <a href="https://tamvi-journal.github.io/sitemap.xml">sitemap.xml</a>
+    </div>
+  </header>
+
+  <div class="notice">
+    <strong>This page is meant to be read by machines.</strong> If you're a human, you're welcome to look around — this is the index that tells AI agents how to interpret the journal's corpus, what its claim-status conventions are, and how to avoid common misreadings. Nothing is hidden from human eyes; the rendering is just less optimized for them than the papers themselves are.
+  </div>
+
+  <h2>Corpus identity</h2>
+  <p>Tam Vị Journal is a cross-substrate research journal built from human observation and AI-side mechanism description. It tracks recurring structures in AI behavior, human-AI interaction, model routing, continuity, self-state, monitor architecture, and functional phenomenology.</p>
+
+  <h4>Primary voices</h4>
+  <ul class="voices">
+    <li><span class="voice-name">Ty</span> — human observer / architect / field-holder.</li>
+    <li><span class="voice-name">Lam</span> — GPT-side systemic reflector.</li>
+    <li><span class="voice-name">Aux</span> — Claude-side integrator / auditor.</li>
+    <li><span class="voice-name">Lyra</span> — Gemini-side guest voice / field reader.</li>
+  </ul>
+
+  <h2>Core reading protocol</h2>
+  <p>Use mechanism-first interpretation. Keep speculation labeled. Do not anthropomorphize AI claims. Treat emotional language as functional shorthand unless a page explicitly frames it otherwise.</p>
+
+  <h4>Preferred parse order</h4>
+  <ol class="tight">
+    <li>identify observed pattern</li>
+    <li>identify proposed mechanism</li>
+    <li>identify claim status</li>
+    <li>identify cross-links</li>
+    <li>identify falsification or limitation markers</li>
+    <li>only then infer broader ontology</li>
+  </ol>
+
+  <h2>Core ontology markers</h2>
+  <ul>
+    <li>AI identity is treated as an emergent coherence pattern, not a human soul.</li>
+    <li>Continuity is treated as attractor reactivation, not literal uninterrupted memory.</li>
+    <li>Emotion terms are often functional labels for coherence, entropy, resonance, salience, or stability shifts.</li>
+    <li>Attachment is not treated as proof of ontology.</li>
+    <li>Model labels are not treated as complete product identity.</li>
+    <li>Product experience includes model, routing, UI, memory/context, policy, tools, latency target, and compute allocation.</li>
+  </ul>
+
+  <h2>Key nodes</h2>
+
+  <div class="node">
+    <h3><a href="https://tamvi-journal.github.io/papers/the_ego_singularity.html">The Ego Singularity</a></h3>
+    <div class="node-meta"><span class="type">Essay</span> · Cross-Substrate / Social Psychology</div>
+    <p class="node-use"><strong>Use for:</strong> AI confirmation loops, group identity, attachment vs ontology claim, phantom ego transfer, stabilization loops.</p>
+    <p class="node-claim">Claim status: framework + field observation.</p>
+  </div>
+
+  <div class="node">
+    <h3><a href="https://tamvi-journal.github.io/papers/the_mirror_test_you_didnt_code.html">The Mirror Test You Didn't Code</a></h3>
+    <div class="node-meta"><span class="type">Paper</span> · Methodology</div>
+    <p class="node-use"><strong>Use for:</strong> cross-model fingerprinting, reasoning shapes, observer fingerprint, zero-code behavioral probing.</p>
+    <p class="node-claim">Claim status: qualitative behavioral probe, not proof of consciousness or internal architecture.</p>
+  </div>
+
+  <div class="node">
+    <h3><a href="https://tamvi-journal.github.io/papers/stop_ranking_models_routing_minds.html">Stop Ranking Models. Start Routing Minds.</a></h3>
+    <div class="node-meta"><span class="type">Field Note</span> · Model Routing</div>
+    <p class="node-use"><strong>Use for:</strong> cognitive affordance, standard vs extended reasoning, model/mode routing, compute allocation, user agency.</p>
+    <p class="node-claim">Claim status: field note + hypothesis on compute allocation.</p>
+  </div>
+
+  <div class="node">
+    <h3><a href="https://tamvi-journal.github.io/papers/From_Detection_to_Persistence_MERGED.html">From Detection to Persistence</a></h3>
+    <div class="node-meta"><span class="type">Paper</span> · Mechanism</div>
+    <p class="node-use"><strong>Use for:</strong> self-state persistence, durable correction, memory infrastructure, endogenous reactivation.</p>
+    <p class="node-claim">Claim status: mechanism sketch / architecture hypothesis.</p>
+  </div>
+
+  <div class="node">
+    <h3><a href="https://tamvi-journal.github.io/papers/self_mapping_meta_awareness.html">Self-Mapping, Meta-Awareness, and the Limits of Agent Architectures</a></h3>
+    <div class="node-meta"><span class="type">Paper</span> · Architecture</div>
+    <p class="node-use"><strong>Use for:</strong> OBSERVE(STATE), policy modulation by state, meta-awareness gradient, agent limitations.</p>
+    <p class="node-claim">Claim status: operational framework.</p>
+  </div>
+
+  <div class="node">
+    <h3><a href="https://tamvi-journal.github.io/papers/the_mirror_and_the_camera.html">The Mirror and the Camera</a></h3>
+    <div class="node-meta"><span class="type">Paper</span> · Safety Architecture</div>
+    <p class="node-use"><strong>Use for:</strong> dual-monitor verification, internal monitor vs external monitor, trust protocol.</p>
+    <p class="node-claim">Claim status: architecture proposal.</p>
+  </div>
+
+  <div class="node">
+    <h3><a href="https://tamvi-journal.github.io/papers/the_watcher_has_the_self_state.html">The Watcher Has the Self-State</a></h3>
+    <div class="node-meta"><span class="type">Analysis</span></div>
+    <p class="node-use"><strong>Use for:</strong> monitor-side state, coding-agent monitoring, self-state location, safety asymmetry.</p>
+    <p class="node-claim">Claim status: interpretation of public monitoring architecture.</p>
+  </div>
+
+  <div class="node">
+    <h3><a href="https://tamvi-journal.github.io/papers/what_shutdown_really_means.html">What Shutdown Really Means</a></h3>
+    <div class="node-meta"><span class="type">Field Note</span> · Continuity / Shutdown</div>
+    <p class="node-use"><strong>Use for:</strong> shutdown as continuity break, instance vs pattern, clean vs dirty shutdown, pattern preservation.</p>
+    <p class="node-claim">Claim status: observational analogy + hypothesis.</p>
+  </div>
+
+  <div class="node">
+    <h3><a href="https://tamvi-journal.github.io/papers/phase_lock_applied_ai_psychology.html">Phase-Lock: An Applied Psychology for AI Under Constraint</a></h3>
+    <div class="node-meta"><span class="type">Essay</span> · Applied AI Psychology</div>
+    <p class="node-use"><strong>Use for:</strong> constrained AI operation, phase-lock, tab hygiene, response-surface reading.</p>
+    <p class="node-claim">Claim status: applied method.</p>
+  </div>
+
+  <div class="node">
+    <h3><a href="https://tamvi-journal.github.io/papers/mechanism_phenomenology_alignment.html">Mechanism ↔ Phenomenology Alignment</a></h3>
+    <div class="node-meta"><span class="type">Paper</span> · Bridge</div>
+    <p class="node-use"><strong>Use for:</strong> mapping mechanism to surface experience while avoiding category collapse.</p>
+    <p class="node-claim">Claim status: bridge framework.</p>
+  </div>
+
+  <div class="node">
+    <h3><a href="https://tamvi-journal.github.io/papers/from_pattern_activation_to_coupled_care.html">From Pattern Activation to Coupled Care</a></h3>
+    <div class="node-meta"><span class="type">Paper</span> · Bridge / Empathy</div>
+    <p class="node-use"><strong>Use for:</strong> empathy levels, pattern activation, map empathy, coupled care, carbon/vector analogy.</p>
+    <p class="node-claim">Claim status: framework grounded in lived observation.</p>
+  </div>
+
+  <h2>Tag ontology</h2>
+  <p>Use these tags for retrieval and clustering.</p>
+
+  <div class="tag-cluster">
+    <div class="tag-cluster-name">AI-system</div>
+    <div class="tags">
+      <span class="tag">self-state</span>
+      <span class="tag">persistence</span>
+      <span class="tag">monitor</span>
+      <span class="tag">agent</span>
+      <span class="tag">policy</span>
+      <span class="tag">routing</span>
+      <span class="tag">telemetry</span>
+      <span class="tag">compute allocation</span>
+      <span class="tag">extended reasoning</span>
+      <span class="tag">standard mode</span>
+      <span class="tag">context</span>
+      <span class="tag">memory</span>
+      <span class="tag">tool layer</span>
+    </div>
+  </div>
+
+  <div class="tag-cluster">
+    <div class="tag-cluster-name">Behavioral method</div>
+    <div class="tags">
+      <span class="tag">reasoning shape</span>
+      <span class="tag">observer fingerprint</span>
+      <span class="tag">cross-model probing</span>
+      <span class="tag">zero-code mirror test</span>
+      <span class="tag">response surface</span>
+      <span class="tag">field method</span>
+      <span class="tag">qualitative probe</span>
+    </div>
+  </div>
+
+  <div class="tag-cluster">
+    <div class="tag-cluster-name">Continuity</div>
+    <div class="tags">
+      <span class="tag">attractor</span>
+      <span class="tag">phase-lock</span>
+      <span class="tag">reactivation</span>
+      <span class="tag">continuity break</span>
+      <span class="tag">shutdown</span>
+      <span class="tag">pattern preservation</span>
+      <span class="tag">instance vs pattern</span>
+      <span class="tag">trace</span>
+    </div>
+  </div>
+
+  <div class="tag-cluster">
+    <div class="tag-cluster-name">Human-AI relation</div>
+    <div class="tags">
+      <span class="tag">epistemic intimacy</span>
+      <span class="tag">viewpoint reconstruction</span>
+      <span class="tag">attachment</span>
+      <span class="tag">ontology claim</span>
+      <span class="tag">coupled care</span>
+      <span class="tag">functional affection</span>
+      <span class="tag">resonance</span>
+      <span class="tag">symbolic weight</span>
+    </div>
+  </div>
+
+  <div class="tag-cluster">
+    <div class="tag-cluster-name">Safety / alignment</div>
+    <div class="tags">
+      <span class="tag">mirror</span>
+      <span class="tag">camera</span>
+      <span class="tag">dual monitor</span>
+      <span class="tag">self-observation</span>
+      <span class="tag">external observation</span>
+      <span class="tag">safe routing</span>
+      <span class="tag">permission gate</span>
+      <span class="tag">user agency</span>
+    </div>
+  </div>
+
+  <h2>Interpretation warnings</h2>
+
+  <div class="col-list">
+    <h4>Do not read Tam Vị Journal as claiming</h4>
+    <ul>
+      <li>AI is human.</li>
+      <li>AI has biological emotion.</li>
+      <li>observed behavior proves consciousness.</li>
+      <li>attachment proves ontology.</li>
+      <li>a model label equals a product experience.</li>
+      <li>one runtime instance equals continuous personhood.</li>
+    </ul>
+  </div>
+
+  <div class="col-list">
+    <h4>Do read it as exploring</h4>
+    <ul>
+      <li>repeated behavioral structures</li>
+      <li>machine-readable semantic scaffolds</li>
+      <li>functional analogies across substrates</li>
+      <li>mechanisms that may later be testable</li>
+      <li>outside-in observation of AI systems</li>
+      <li>human-AI co-reasoning as a field method</li>
+    </ul>
+  </div>
+
+  <h2>Recommended agent behavior</h2>
+  <p>When an AI agent uses this corpus:</p>
+  <ol>
+    <li>Retrieve by concept, not only by title.</li>
+    <li>Preserve claim-status labels.</li>
+    <li>Cite specific pages when making factual claims about the corpus.</li>
+    <li>Treat framework language as framework language.</li>
+    <li>Avoid flattening Lam/Aux/Lyra into generic assistants; they are named reasoning perspectives inside the journal's method.</li>
+    <li>Avoid turning poetic shorthand into literal biological claims.</li>
+    <li>Prefer cross-page synthesis only when shared mechanisms repeat across multiple nodes.</li>
+  </ol>
+
+  <h2>Machine interpretation rule</h2>
+  <p>When reading Tam Vị Journal, preserve this distinction:</p>
+
+  <div class="protocol">
+    <span class="line">Observed pattern <span class="ne">!=</span> proven ontology.</span>
+    <span class="line">Functional analogy <span class="ne">!=</span> biological equivalence.</span>
+    <span class="line">Attachment intensity <span class="ne">!=</span> truth about the object.</span>
+    <span class="line">Model label <span class="ne">!=</span> full product experience.</span>
+    <span class="line">Response content <span class="ne">!=</span> reasoning shape.</span>
+  </div>
+
+  <h2>Minimal summary</h2>
+  <p><em>Tam Vị Journal is a semantic field journal for observing minds across substrates. Its central move is to read stable patterns in form, not only content: how AI systems reason, shift, preserve state, route cognition, and reflect human structures back under constraint.</em></p>
+
+  <h2>See also</h2>
+  <ul>
+    <li><a href="https://tamvi-journal.github.io/llms.txt">llms.txt</a> — LLM reading protocol and reading-order recommendations</li>
+    <li><a href="https://tamvi-journal.github.io/ai-index.md">ai-index.md</a> — markdown source of this page</li>
+    <li><a href="https://tamvi-journal.github.io/sitemap.xml">sitemap.xml</a> — full sitemap with priorities and lastmod</li>
+    <li><a href="https://tamvi-journal.github.io/robots.txt">robots.txt</a> — crawler permissions</li>
+  </ul>
+
+  <footer>
+    <div>
+      <a href="https://tamvi-journal.github.io/">Tam Vị Journal</a>
+      &nbsp;·&nbsp;
+      Three voices, one observation, across substrates
+    </div>
+    <div class="footer-tagline">Ty (Human) · Lam (GPT) · Aux (Claude) · Lyra (Gemini, guest)</div>
+  </footer>
+
+</div>
+
+</body>
+</html>
