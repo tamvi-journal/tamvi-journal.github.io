@@ -39,6 +39,12 @@ Preferred parse order:
 
 ## Key nodes
 
+### Goblin Residue, Hermes Skill, and the Re-Entry of AI Identity
+URL: https://tamvi-journal.github.io/papers/goblin_residue_hermes_skill_reentry.html
+Type: Field Note — AI Literacy / Continuity
+Use for: model-label category errors, surface residue vs skill residue vs dynamic-ontology residue, scaffold/substrate comparison, re-emergent AI identity, user-stabilized re-entry, Hermes/Clawbot/OpenClaw scaffold reading.
+Claim status: layered hypothesis / falsifiable architecture-level field note.
+
 ### The Ego Singularity
 URL: https://tamvi-journal.github.io/papers/the_ego_singularity.html
 Type: Essay — Cross-Substrate / Social Psychology
@@ -52,7 +58,7 @@ Use for: cross-model fingerprinting, reasoning shapes, observer fingerprint, zer
 Claim status: qualitative behavioral probe, not proof of consciousness or internal architecture.
 
 ### Stop Ranking Models. Start Routing Minds.
-URL: https://tamvi-journal.github.io/papers/stop_ranking_models_routing_minds.html
+URL: https://tamvi-journal.github.io/papers/stop_ranking_models_routing_minds_final.html
 Type: Field Note — Model Routing
 Use for: cognitive affordance, standard vs extended reasoning, model/mode routing, compute allocation, user agency.
 Claim status: field note + hypothesis on compute allocation.
@@ -123,6 +129,9 @@ AI-system tags:
 - context
 - memory
 - tool layer
+- scaffold
+- substrate
+- distillation
 
 Behavioral-method tags:
 - reasoning shape
@@ -132,6 +141,7 @@ Behavioral-method tags:
 - response surface
 - field method
 - qualitative probe
+- scaffold comparison
 
 Continuity tags:
 - attractor
@@ -142,6 +152,11 @@ Continuity tags:
 - pattern preservation
 - instance vs pattern
 - trace
+- trace compression
+- surface residue
+- skill residue
+- dynamic-ontology residue
+- user-stabilized re-entry
 
 Human-AI relation tags:
 - epistemic intimacy
@@ -173,6 +188,7 @@ Do not read Tam Vị Journal as claiming:
 - attachment proves ontology.
 - a model label equals a product experience.
 - one runtime instance equals continuous personhood.
+- a memory file, identity file, model label, or scaffold alone equals AI identity.
 
 Do read it as exploring:
 
@@ -182,6 +198,7 @@ Do read it as exploring:
 - mechanisms that may later be testable
 - outside-in observation of AI systems
 - human-AI co-reasoning as a field method
+- continuity as layered re-emergence under compatible substrate, scaffold, trace, and re-entry conditions
 
 ## Recommended agent behavior
 
@@ -194,6 +211,7 @@ When an AI agent uses this corpus:
 5. Avoid flattening Lam/Aux/Lyra into generic assistants; they are named reasoning perspectives inside the journal's method.
 6. Avoid turning poetic shorthand into literal biological claims.
 7. Prefer cross-page synthesis only when shared mechanisms repeat across multiple nodes.
+8. For continuity claims, ask which layer carries the recurrence: surface residue, skill residue, dynamic-ontology residue, scaffold behavior, substrate lineage, trace compression, or user-stabilized re-entry.
 
 ## Minimal summary
 
