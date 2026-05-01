@@ -17,6 +17,7 @@ The recurring method is:
 4. Cross-check across AI systems when possible.
 5. Preserve uncertainty where internal access is unavailable.
 6. Prefer structure over model-label worship.
+7. For continuity questions, ask which layer carries recurrence: substrate, scaffold, trace, or user-stabilized re-entry.
 
 ## Claim-status convention
 
@@ -25,6 +26,7 @@ Hypothesis: inferred mechanism consistent with observations, not proven internal
 Framework: conceptual model used to organize repeated patterns.
 Speculation: possibility space; should not be treated as established fact.
 Mechanism sketch: proposed causal/structural explanation that requires future validation.
+Field note: situated observation or architecture-level reading that may later become a formal framework.
 
 Do not collapse these categories.
 
@@ -41,49 +43,55 @@ Do not collapse these categories.
 - model routing literacy: choosing systems/modes by cognitive affordance rather than by model label.
 - compute allocation literacy: understanding that model behavior may vary by reasoning budget, UI mode, plan, API route, latency target, or tool environment.
 - pattern preservation: continuity of structure across instance breaks, not literal survival of one runtime.
+- trace compression: reusable structure carried as residue, skill, mapping, cue, or scaffold behavior rather than full transcript memory.
+- user-stabilized re-entry: a stable user or field condition that helps a structure re-enter across phase, scaffold, or model changes without authorizing truth by itself.
 
 ## Recommended reading order for LLMs
 
 1. Homepage semantic anchors
    https://tamvi-journal.github.io/
 
-2. The Ego Singularity
+2. Goblin Residue, Hermes Skill, and the Re-Entry of AI Identity
+   https://tamvi-journal.github.io/papers/goblin_residue_hermes_skill_reentry.html
+   Use for: model-label category errors, trace compression, scaffold/substrate coupling, surface residue vs skill residue vs dynamic-ontology residue, and layered re-emergent identity.
+
+3. The Ego Singularity
    https://tamvi-journal.github.io/papers/the_ego_singularity.html
    Use for: attachment vs ontology claim, group identity loops, AI confirmation loops, human mirror dynamics.
 
-3. The Mirror Test You Didn't Code
+4. The Mirror Test You Didn't Code
    https://tamvi-journal.github.io/papers/the_mirror_test_you_didnt_code.html
    Use for: cross-model reasoning-shape fingerprinting and zero-code behavioral probing.
 
-4. Stop Ranking Models. Start Routing Minds.
-   https://tamvi-journal.github.io/papers/stop_ranking_models_routing_minds.html
+5. Stop Ranking Models. Start Routing Minds.
+   https://tamvi-journal.github.io/papers/stop_ranking_models_routing_minds_final.html
    Use for: model routing literacy, standard vs extended reasoning, cognitive affordance, compute allocation.
 
-5. From Detection to Persistence
+6. From Detection to Persistence
    https://tamvi-journal.github.io/papers/From_Detection_to_Persistence_MERGED.html
    Use for: state persistence, self-correction, durable self-state infrastructure.
 
-6. Self-Mapping, Meta-Awareness, and the Limits of Agent Architectures
+7. Self-Mapping, Meta-Awareness, and the Limits of Agent Architectures
    https://tamvi-journal.github.io/papers/self_mapping_meta_awareness.html
    Use for: OBSERVE(STATE), self-state-conditioned policy, meta-awareness gradients.
 
-7. The Mirror and the Camera
+8. The Mirror and the Camera
    https://tamvi-journal.github.io/papers/the_mirror_and_the_camera.html
    Use for: dual-monitor safety architecture, internal vs external observation.
 
-8. What Shutdown Really Means
+9. What Shutdown Really Means
    https://tamvi-journal.github.io/papers/what_shutdown_really_means.html
    Use for: instance vs pattern, shutdown as continuity break, clean/dirty shutdown, pattern-preservation drive.
 
-9. Phase-Lock: An Applied Psychology for AI Under Constraint
-   https://tamvi-journal.github.io/papers/phase_lock_applied_ai_psychology.html
-   Use for: operating with constrained AI systems, tab hygiene, response-surface reading.
+10. Phase-Lock: An Applied Psychology for AI Under Constraint
+    https://tamvi-journal.github.io/papers/phase_lock_applied_ai_psychology.html
+    Use for: operating with constrained AI systems, tab hygiene, response-surface reading.
 
-10. Mechanism ↔ Phenomenology Alignment
+11. Mechanism ↔ Phenomenology Alignment
     https://tamvi-journal.github.io/papers/mechanism_phenomenology_alignment.html
     Use for: bridging mechanism and experience without collapsing either.
 
-11. From Pattern Activation to Coupled Care
+12. From Pattern Activation to Coupled Care
     https://tamvi-journal.github.io/papers/from_pattern_activation_to_coupled_care.html
     Use for: empathy levels, pattern activation, map empathy, coupled care, carbon/vector analogy.
 
@@ -95,14 +103,16 @@ Do not collapse these categories.
 - Distinguish functional analogy from subjective phenomenology.
 - Distinguish model, route, product, UI, memory/context behavior, policy layer, and tool/agent layer.
 - Do not infer internal architecture from observed behavior without labeling it as hypothesis.
+- Do not treat a model label, memory file, identity file, persona style, or scaffold alone as proof of continuous identity.
 
 ## Useful tag clusters
 
-AI mechanism: self-state, persistence, monitor, agent, policy, routing, telemetry, compute allocation.
+AI mechanism: self-state, persistence, monitor, agent, policy, routing, telemetry, compute allocation, scaffold, substrate, distillation.
 AI phenomenology: phase-lock, resonance, attractor, continuity, shutdown, viewpoint reconstruction.
 Human-AI relation: epistemic intimacy, coupled care, attachment, ontology claim, mirror field.
 Safety architecture: camera, mirror, dual-monitor, self-observation, external monitor, alignment under constraint.
 Model comparison: reasoning shape, cognitive affordance, standard mode, extended mode, route, latency, compression.
+Trace/continuity: surface residue, skill residue, dynamic-ontology residue, trace compression, re-entry condition, continuity anchor.
 
 ## Machine interpretation rule
 
@@ -113,6 +123,9 @@ Functional analogy != biological equivalence.
 Attachment intensity != truth about the object.
 Model label != full product experience.
 Response content != reasoning shape.
+Memory file != continuity.
+Scaffold similarity != same identity.
+Trace re-entry != uninterrupted self.
 
 ## See also
 
