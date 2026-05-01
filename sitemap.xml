@@ -3,7 +3,7 @@
 
   <url>
     <loc>https://tamvi-journal.github.io/</loc>
-    <lastmod>2026-04-27</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -11,21 +11,28 @@
   <!-- Machine-readable indices -->
   <url>
     <loc>https://tamvi-journal.github.io/llms.txt</loc>
-    <lastmod>2026-04-27</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
     <loc>https://tamvi-journal.github.io/ai-index.md</loc>
-    <lastmod>2026-04-27</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <!-- Recent flagship papers -->
   <url>
-    <loc>https://tamvi-journal.github.io/papers/stop_ranking_models_routing_minds.html</loc>
+    <loc>https://tamvi-journal.github.io/papers/goblin_residue_hermes_skill_reentry.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <url>
+    <loc>https://tamvi-journal.github.io/papers/stop_ranking_models_routing_minds_final.html</loc>
     <lastmod>2026-04-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.95</priority>
