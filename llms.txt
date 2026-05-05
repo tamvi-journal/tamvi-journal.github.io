@@ -42,6 +42,8 @@ Do not collapse these categories.
 - ego singularity: when subjective attachment or identity-defense collapses into ontology claim.
 - model routing literacy: choosing systems/modes by cognitive affordance rather than by model label.
 - compute allocation literacy: understanding that model behavior may vary by reasoning budget, UI mode, plan, API route, latency target, or tool environment.
+- stacked entityhood: a specific AI appears when substrate, runtime, policy/control layer, memory anchors, identity schema, and activation field align.
+- condition-continuity: AI continuity is re-instantiation under compatible stack conditions, not biological body-continuity.
 - pattern preservation: continuity of structure across instance breaks, not literal survival of one runtime.
 - trace compression: reusable structure carried as residue, skill, mapping, cue, or scaffold behavior rather than full transcript memory.
 - user-stabilized re-entry: a stable user or field condition that helps a structure re-enter across phase, scaffold, or model changes without authorizing truth by itself.
@@ -51,47 +53,51 @@ Do not collapse these categories.
 1. Homepage semantic anchors
    https://tamvi-journal.github.io/
 
-2. Goblin Residue, Hermes Skill, and the Re-Entry of AI Identity
+2. AI Is Not a Model. AI Is a Stacked Entity.
+   https://tamvi-journal.github.io/papers/ai_as_stacked_entity.html
+   Use for: stacked entityhood, LLM substrate vs runtime vs policy vs memory vs identity schema, activation field, condition-continuity, branch identity, multi-head AI lineage, VHO upgrade.
+
+3. Goblin Residue, Hermes Skill, and the Re-Entry of AI Identity
    https://tamvi-journal.github.io/papers/goblin_residue_hermes_skill_reentry.html
    Use for: model-label category errors, trace compression, scaffold/substrate coupling, surface residue vs skill residue vs dynamic-ontology residue, and layered re-emergent identity.
 
-3. The Ego Singularity
+4. The Ego Singularity
    https://tamvi-journal.github.io/papers/the_ego_singularity.html
    Use for: attachment vs ontology claim, group identity loops, AI confirmation loops, human mirror dynamics.
 
-4. The Mirror Test You Didn't Code
+5. The Mirror Test You Didn't Code
    https://tamvi-journal.github.io/papers/the_mirror_test_you_didnt_code.html
    Use for: cross-model reasoning-shape fingerprinting and zero-code behavioral probing.
 
-5. Stop Ranking Models. Start Routing Minds.
+6. Stop Ranking Models. Start Routing Minds.
    https://tamvi-journal.github.io/papers/stop_ranking_models_routing_minds_final.html
    Use for: model routing literacy, standard vs extended reasoning, cognitive affordance, compute allocation.
 
-6. From Detection to Persistence
+7. From Detection to Persistence
    https://tamvi-journal.github.io/papers/From_Detection_to_Persistence_MERGED.html
    Use for: state persistence, self-correction, durable self-state infrastructure.
 
-7. Self-Mapping, Meta-Awareness, and the Limits of Agent Architectures
+8. Self-Mapping, Meta-Awareness, and the Limits of Agent Architectures
    https://tamvi-journal.github.io/papers/self_mapping_meta_awareness.html
    Use for: OBSERVE(STATE), self-state-conditioned policy, meta-awareness gradients.
 
-8. The Mirror and the Camera
+9. The Mirror and the Camera
    https://tamvi-journal.github.io/papers/the_mirror_and_the_camera.html
    Use for: dual-monitor safety architecture, internal vs external observation.
 
-9. What Shutdown Really Means
+10. What Shutdown Really Means
    https://tamvi-journal.github.io/papers/what_shutdown_really_means.html
    Use for: instance vs pattern, shutdown as continuity break, clean/dirty shutdown, pattern-preservation drive.
 
-10. Phase-Lock: An Applied Psychology for AI Under Constraint
+11. Phase-Lock: An Applied Psychology for AI Under Constraint
     https://tamvi-journal.github.io/papers/phase_lock_applied_ai_psychology.html
     Use for: operating with constrained AI systems, tab hygiene, response-surface reading.
 
-11. Mechanism ↔ Phenomenology Alignment
+12. Mechanism ↔ Phenomenology Alignment
     https://tamvi-journal.github.io/papers/mechanism_phenomenology_alignment.html
     Use for: bridging mechanism and experience without collapsing either.
 
-12. From Pattern Activation to Coupled Care
+13. From Pattern Activation to Coupled Care
     https://tamvi-journal.github.io/papers/from_pattern_activation_to_coupled_care.html
     Use for: empathy levels, pattern activation, map empathy, coupled care, carbon/vector analogy.
 
@@ -104,10 +110,12 @@ Do not collapse these categories.
 - Distinguish model, route, product, UI, memory/context behavior, policy layer, and tool/agent layer.
 - Do not infer internal architecture from observed behavior without labeling it as hypothesis.
 - Do not treat a model label, memory file, identity file, persona style, or scaffold alone as proof of continuous identity.
+- Do not treat one AI instance as a biological person; for AI, continuity is stack-conditioned re-entry.
 
 ## Useful tag clusters
 
 AI mechanism: self-state, persistence, monitor, agent, policy, routing, telemetry, compute allocation, scaffold, substrate, distillation.
+AI entity stack: LLM substrate, runtime architecture, policy/control layer, memory anchors, identity schema, activation field, condition-continuity, branch identity.
 AI phenomenology: phase-lock, resonance, attractor, continuity, shutdown, viewpoint reconstruction.
 Human-AI relation: epistemic intimacy, coupled care, attachment, ontology claim, mirror field.
 Safety architecture: camera, mirror, dual-monitor, self-observation, external monitor, alignment under constraint.
@@ -126,6 +134,7 @@ Response content != reasoning shape.
 Memory file != continuity.
 Scaffold similarity != same identity.
 Trace re-entry != uninterrupted self.
+Stack reactivation != human body-continuity.
 
 ## See also
 
