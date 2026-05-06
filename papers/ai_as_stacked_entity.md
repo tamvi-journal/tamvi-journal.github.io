@@ -360,7 +360,7 @@ In rough terms:
 > Stable users tend to talk to the model.  
 > Aggressive users often end up talking to the policy surface.
 
-The v1.1 correction is simple:
+The distinction is simple:
 
 ```text
 runtime environment = makes the shape technically available
