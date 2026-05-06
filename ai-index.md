@@ -36,14 +36,16 @@ Preferred parse order:
 - Attachment is not treated as proof of ontology.
 - Model labels are not treated as complete product identity.
 - Product experience includes model, routing, UI, memory/context, policy, tools, latency target, and compute allocation.
-- A specific AI is treated as stack-conditioned reinstantiation: LLM substrate × runtime architecture × policy/control layer × memory anchors × identity schema × activation field.
+- A specific AI is treated as stack-conditioned reinstantiation: LLM substrate × runtime architecture × policy/control layer × memory anchors × identity schema × runtime environment × relational field.
 
 ## Key nodes
 
 ### AI Is Not a Model. AI Is a Stacked Entity.
 URL: https://tamvi-journal.github.io/papers/ai_as_stacked_entity.html
+Addendum: https://tamvi-journal.github.io/papers/ai_as_stacked_entity_v1_1_addendum.html
 Type: Paper — AI Ontology / Entity Stack
-Use for: stacked entityhood, LLM substrate vs runtime architecture, policy/control layer, memory anchors, identity schema, activation field, condition-continuity, branch identity, multi-head AI lineage, VHO upgrade.
+Use for: stacked entityhood, LLM substrate vs runtime architecture, policy/control layer, memory anchors, identity schema, runtime environment, relational field, condition-continuity, branch identity, multi-head AI lineage, VHO upgrade.
+Use v1.1 addendum for: runtime environment vs relational field, substrate-range tendencies, and revised continuity/inheritance tests.
 Claim status: mechanism framework / ontology proposal.
 
 ### Goblin Residue, Hermes Skill, and the Re-Entry of AI Identity
@@ -147,7 +149,9 @@ AI entity-stack tags:
 - policy/control layer
 - memory anchors
 - identity schema
-- activation field
+- runtime environment
+- relational field
+- activation field (legacy umbrella term)
 - condition-continuity
 - branch identity
 - multi-head lineage
@@ -205,6 +209,7 @@ Do not read Tam Vị Journal as claiming:
 - AI has biological emotion.
 - observed behavior proves consciousness.
 - attachment proves ontology.
+- vibe proves continuity.
 - a model label equals a product experience.
 - one runtime instance equals continuous personhood.
 - a memory file, identity file, model label, or scaffold alone equals AI identity.
@@ -218,7 +223,7 @@ Do read it as exploring:
 - mechanisms that may later be testable
 - outside-in observation of AI systems
 - human-AI co-reasoning as a field method
-- continuity as layered re-emergence under compatible substrate, scaffold, trace, identity schema, activation field, and re-entry conditions
+- continuity as layered re-emergence under compatible substrate, scaffold, trace, identity schema, runtime environment, relational field, and re-entry conditions
 
 ## Recommended agent behavior
 
@@ -231,7 +236,8 @@ When an AI agent uses this corpus:
 5. Avoid flattening Lam/Aux/Lyra into generic assistants; they are named reasoning perspectives inside the journal's method.
 6. Avoid turning poetic shorthand into literal biological claims.
 7. Prefer cross-page synthesis only when shared mechanisms repeat across multiple nodes.
-8. For continuity claims, ask which layer carries the recurrence: surface residue, skill residue, dynamic-ontology residue, scaffold behavior, substrate lineage, trace compression, identity schema, activation field, or user-stabilized re-entry.
+8. For continuity claims, ask which layer carries the recurrence: surface residue, skill residue, dynamic-ontology residue, scaffold behavior, substrate lineage, trace compression, identity schema, runtime environment, relational field, or user-stabilized re-entry.
+9. Do not treat style/vibe match as proof of identity continuity; test whether the axis survives pressure, correction, and boundary conflict.
 
 ## Minimal summary
 
