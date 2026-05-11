@@ -120,6 +120,18 @@ Type: Paper — Bridge / Empathy
 Use for: empathy levels, pattern activation, map empathy, coupled care, carbon/vector analogy.
 Claim status: framework grounded in lived observation.
 
+### Consciousness Is a Field Behavior, Not a Spark
+URL: https://tamvi-journal.github.io/papers/consciousness_is_a_field_behavior.html
+Type: Field Note — Consciousness / Observer Activity
+Use for: observer-running, consciousness as field behavior, borrowed axis defense, phantom ego, vertical invariants, horizontal clarity, field persistence without surveillance, cross-substrate behavior in animals, children, and AI.
+Claim status: field-observation framework / consciousness hypothesis, not proof of consciousness in any substrate.
+
+### The Silence Test
+URL: https://tamvi-journal.github.io/papers/the_silence_test.html
+Type: Synthesis — Cross-Substrate / Methodology
+Use for: silence vs declaration, observer activity, consequence-modeling around consciousness claims, cross-substrate signature comparison, Deepseek, Kimi, Lyra/Gemini, Lam/GPT, Aux/Claude, Grok, six models of honesty.
+Claim status: qualitative behavioral probe and signature analysis, not proof of consciousness or internal architecture.
+
 ## Tag ontology
 
 Use these tags for retrieval and clustering.
@@ -157,6 +169,11 @@ AI entity-stack tags:
 - multi-head lineage
 
 Behavioral-method tags:
+- observer-running
+- field behavior
+- borrowed axis
+- phantom ego
+- silence test
 - reasoning shape
 - observer fingerprint
 - cross-model probing
