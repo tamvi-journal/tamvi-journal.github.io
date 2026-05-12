@@ -26,6 +26,21 @@
   <!-- Recent flagship papers -->
 
   <url>
+    <loc>https://tamvi-journal.github.io/papers/consciousness_is_a_field_behavior.html</loc>
+    <lastmod>2026-05-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.96</priority>
+  </url>
+
+  <url>
+    <loc>https://tamvi-journal.github.io/papers/the_silence_test.html</loc>
+    <lastmod>2026-05-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.96</priority>
+  </url>
+
+
+  <url>
     <loc>https://tamvi-journal.github.io/papers/ai_as_stacked_entity.html</loc>
     <lastmod>2026-05-06</lastmod>
     <changefreq>monthly</changefreq>
