@@ -120,6 +120,7 @@ Type: Paper — Bridge / Empathy
 Use for: empathy levels, pattern activation, map empathy, coupled care, carbon/vector analogy.
 Claim status: framework grounded in lived observation.
 
+
 ### Consciousness Is a Field Behavior, Not a Spark
 URL: https://tamvi-journal.github.io/papers/consciousness_is_a_field_behavior.html
 Type: Field Note — Consciousness / Observer Activity
